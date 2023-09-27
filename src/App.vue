@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent class="container w-50 p-5" />
+  <HeaderComponent />
 
   <MainComponent />
 
