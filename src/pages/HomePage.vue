@@ -24,29 +24,44 @@
 </script>
 
 <template>
-    <main>
-        <section>
-            <div class="container mt-5 mb-5">
-                <div class="row text-center">
-                    <div class="col" v-for="project in projects">
-                        <h3 class="py-">{{ project.title }}</h3>
-                        <img :src="project.img_link" alt="" class="w-100">
-                        <p>{{ project.description }}</p>
-                        <h4 class="py-2">Technologies</h4>
-                        <span class="badge text-bg-info mx-1" v-for="technology in project.technologies"> 
-                            {{ technology.title }}
-                        </span>
-                        <h6 class="py-2">
-                            Type: {{ project.type.title }}
-                        </h6>
-                    </div>
+    <section class="w-100">
+        <div class="hero">
+
+        </div>
+        <div class="container text-light">
+            <div class="row text-center">
+                <div class="col">
+                    <h1 class="py-4">
+                        Welcome on My Portofolio
+                    </h1>
+                    <button class="btn btn-dark">
+                        <router-link :to="{name: 'projects'}"> View My Projects </router-link>
+                    </button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables.scss" as *;
 
+section {
+    
+    min-height: calc(100vh - 116px);
+
+    .hero {
+        width: 100%;
+        height: 350px;
+        background-position: center;
+        object-fit: fill;
+        background-image: url(https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
 </style>
